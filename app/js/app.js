@@ -80,7 +80,6 @@ const currentYear = document.getElementById('current-year');
 currentYear.innerText = year;
 
 
-
 // Set cookie
 function setCookie(name, value, days) {
   let expires = "";
@@ -97,18 +96,32 @@ function getCookie(name) {
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
+function loadMetrica() {
+  console.log('metrika load');
+}
+
 function checkCookies() {
   let cookieNote = document.querySelector('#cookie_note');
   let cookieBtnAccept = cookieNote.querySelector('#cookie_accept');
+  const cookieBtnDontAccept = cookieNote.querySelector('#cookie_dont_accept');
 
   // Если куки we-use-cookie нет или она просрочена, то показываем уведомление
-  if (!getCookie('we-use-cookie')) {
+  if (!getCookie('we_use_cookie')) {
     cookieNote.classList.add('active');
   }
 
-  // При клике на кнопку устанавливаем куку we-use-cookie на один год
+  if (getCookie('we_use_cookie') == 'true') {
+    loadMetrica();
+  }
+
   cookieBtnAccept.addEventListener('click', function () {
-    setCookie('we-use-cookie', 'true', 365);
+    setCookie('we_use_cookie', 'true', 365);
+    cookieNote.classList.remove('active');
+    loadMetrica();
+  });
+
+  cookieBtnDontAccept.addEventListener('click', function () {
+    setCookie('we_use_cookie', 'false', 10);
     cookieNote.classList.remove('active');
   });
 }

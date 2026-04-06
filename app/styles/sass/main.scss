@@ -85,9 +85,6 @@ p {
   color: config.$violetcolor;
   text-transform: uppercase;
 }
-.input-field.required {
-  border: 1px solid red !important;
-}
 .input-number {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -101,21 +98,26 @@ p {
   appearance: none;
 }
 */
+.input-field.required {
+  border: 1px solid red !important;
+}
 
 // Header
 .header {
   p {
     font-size: 20px;
   }
+  h4 {
+    font-family: 'Monomakh-Regular';
+  }
 }
 
 // Privacy pilocy page
 .privacy-policy-page,
 .soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh-page {
-  font-family: 'opensans-regular';
+  font-family: 'Manrope-regular';
   font-size: 16px;
 }
-
 
 // Modal
 .modal-window {
@@ -127,11 +129,9 @@ p {
   top: 0;
   left: 0;
   z-index: 100;
-  /*
   &.active {
     display: block;
   }
-  */
   .modal-wrapper {
     position: fixed;
     top: 50px;
@@ -187,7 +187,7 @@ p {
   .modal-title {
     margin: 0 0 40px 0;
     padding: 0 40px 0 0;
-    font-family: 'opensans-regular';
+    font-family: 'Manrope-regular';
     font-size: 24px;
     color: config.$secondgreycolor;
     line-height: 1.1;
@@ -198,7 +198,7 @@ p {
   .label {
     display: block;
     margin: 0 0 10px 0;
-    font-family: 'opensans-regular';
+    font-family: 'Manrope-regular';
     font-size: 20px;
     color: config.$secondgreycolor;
     line-height: 1.1;
@@ -210,7 +210,7 @@ p {
     padding: 5px 10px;
     border: 1px solid #C8C8C8;
     border-radius: 7px;
-    font-family: 'opensans-regular';
+    font-family: 'Manrope-regular';
     font-size: 18px;
     color: config.$textcolor;
     resize: none;
@@ -226,11 +226,11 @@ p {
     padding: 0;
     border: none;
     border-radius: 10px;
-    background-color: config.$violetcolor;;
+    background-color: config.$violetcolor;
   }
   .modal-submit-btn__text {
     font-size: 30px;
-    color: config.$whitecolor;
+    color: config.$greycolor;
     text-transform: uppercase;
   }
 }
@@ -279,51 +279,53 @@ p {
 // We use cookie
 .we-use-cookie {
   position: fixed;
-  left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 25px;
+  left: 0;
   display: none;
   width: 100%;
-  background: config.$violetgradient;
-  z-index: 15;
-  /*
+  margin: 0 auto;
+  z-index: 10;
   &.active {
     display: block;
   }
-  */
   .we-use-cookie-wrapper {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 30px 12px;
+    display: flex;
+    max-width: 715px;
+    margin: 0 80px 0 auto;
+    padding: 20px;
     border-radius: 10px;
+    background-color: config.$greycolor;
+    align-items: center;
   }
   .we-use-cookie-text {
-    padding: 0 10px 0 0;
-    font-family: 'opensans-semibold';
-    font-size: 20px;
-    color: config.$whitecolor;
-    line-height: 1.3;
-    text-align: center;
+    padding: 0 20px 0 0;
+    font-size: 14px;
+    color: grey;
+  }
+  .we-use-cookie-text a {
+    font-size: 14px;
+    color: grey;
+    text-decoration: underline;
+  }
+  .we-use-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .we-use-cookie-close {
     display: block;
-    width: 170px;
-    height: 50px;
-    margin: 17px auto 0 auto;
+    width: 93px;
+    height: 40px;
     padding: 0;
-    border: none;
+    border: 1px solid grey;
     border-radius: 10px;
-    background-color: config.$violetcolor;
+    background-color: config.$greycolor;
     font-family: inherit;
-    font-size: 20px;
-    color: config.$whitecolor;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    flex-shrink: 0;
     cursor: pointer;
-  }
-  .we-use-cookie-text a {
-    color: #241DFF;
-    text-decoration: underline;
   }
 }
 
@@ -355,7 +357,7 @@ p {
     width: 100%;
     height: 2px;
     border-radius: 3px;
-    background-color: config.$whitecolor;
+    background-color: config.$greycolor;
     transition: all .5s;
   }
   .burger-menu::before {
@@ -397,7 +399,7 @@ p {
   height: 100vh;
   padding: 8px 0 30px 0;
   background: config.$violetgradient;
-  color: config.$whitecolor;
+  color: config.$greycolor;
   opacity: 0;
   visibility: hidden;
   z-index: 16;
@@ -428,7 +430,7 @@ p {
   }
   .menu-item a {
     font-size: 18px;
-    color: config.$whitecolor;
+    color: config.$greycolor;
     text-decoration: none;
   }
   .menu-item__link {
@@ -450,7 +452,7 @@ p {
     display: flex;
     width: 58px;
     height: 35px;
-    border: 1px solid red;
+    border: 1px solid config.$greycolor;
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
@@ -518,6 +520,12 @@ p {
 
 @media only screen and (max-width : 992px) {
 
+  // We use cookie
+  .we-use-cookie {
+    .we-use-cookie-wrapper {
+      margin: 0 auto;
+    }
+  }
 }
 
 @media only screen and (max-width : 768px) {
@@ -588,15 +596,8 @@ p {
   // We use cookie
   .we-use-cookie {
     .we-use-cookie-wrapper {
-      padding: 20px 12px;
-    }
-    .we-use-cookie-text {
-      font-size: 16px;
-    }
-    .we-use-cookie-close {
-      width: 140px;
-      height: 40px;
-      font-size: 16px;
+      margin: 0 12px;
+      padding: 15px;
     }
   }
 
@@ -604,6 +605,21 @@ p {
 
 @media only screen and (max-width : 576px) {
 
+
+  // We use cookie
+  .we-use-cookie {
+    .we-use-cookie-wrapper {
+      padding: 12px;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .we-use-cookie-text {
+      padding: 0 15px 0 0;
+    }
+    .we-use-cookie-buttons {
+      flex-direction: row;
+    }
+  }
 }
 
 @media only screen and (max-width : 480px) {
@@ -611,17 +627,15 @@ p {
 
   // We use cookie
   .we-use-cookie {
-    .we-use-cookie-wrapper {
-      padding: 12px;
-    }
     .we-use-cookie-text {
-      font-size: 14px;
+      font-size: 13px;
+    }
+    .we-use-cookie-text a {
+      font-size: 13px;
     }
     .we-use-cookie-close {
-      width: 120px;
-      height: 30px;
-      border-radius: 5px;
-      font-size: 14px;
+      height: 35px;
+      font-size: 13px;
     }
   }
 

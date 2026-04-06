@@ -5,8 +5,8 @@ import pkg from 'gulp'
 const { src, dest, parallel, series, watch } = pkg
 
 import browserSync      from 'browser-sync'
-import bssi             from 'browsersync-ssi'
-import ssi              from 'ssi'
+// import bssi             from 'browsersync-ssi'
+// import ssi              from 'ssi'
 import webpackStream    from 'webpack-stream'
 import webpack          from 'webpack'
 import TerserPlugin     from 'terser-webpack-plugin'
@@ -30,7 +30,7 @@ function browsersync() {
   browserSync.init({
     server: {
       baseDir: 'app/',
-      middleware: bssi({ baseDir: 'app/', ext: '.html' })
+      // middleware: bssi({ baseDir: 'app/', ext: '.html' })
     },
     ghostMode: { clicks: false },
     notify: false,
@@ -146,8 +146,8 @@ function buildcopy() {
 }
 
 async function buildhtml() {
-  let includes = new ssi('app/', 'dist/', '/**/*.html')
-  includes.compile()
+  // let includes = new ssi('app/', 'dist/', '/**/*.html')
+  // includes.compile()
   await deleteAsync('dist/parts', { force: true })
 }
 

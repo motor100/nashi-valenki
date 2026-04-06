@@ -9,7 +9,7 @@ $violetgradient: linear-gradient(180deg, #1C0064 0%, #2C0086 100%);
 $fontsize: 16px; // Body Font Size
 $textcolor: #000; // Text Color
 $lineheight: 1.5; // Document Line Height
-$userfont: 'russo-one', sans-serif; // User Font Family
+$userfont: 'Manrope-regular', sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 
 // IMPORT SECTION
@@ -25,9 +25,10 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
   }
 }
 
-@include font('opensans-regular', italic, 400, '../fonts/OpenSans-Regular.woff2');
-@include font('opensans-semibold', italic, 400, '../fonts/OpenSans-SemiBold.woff2');
-@include font('opensans-bold', italic, 400, '../fonts/OpenSans-Bold.woff2');
+@include font('Manrope-regular', italic, 400, '../fonts/Manrope-Regular.woff2');
+@include font('Manrope-semibold', italic, 400, '../fonts/Manrope-SemiBold.woff2');
+@include font('Manrope-bold', italic, 400, '../fonts/Manrope-Bold.woff2');
+@include font('Monomakh-Regular', italic, 400, '../fonts/Monomakh-Regular.woff2');
 
 // GENERAL CSS SETTINGS
 * {
