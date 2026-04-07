@@ -51,39 +51,42 @@ p {
 .position-relative {
   position: relative;
 }
-/*
 .section {
-  margin: 0 0 60px 0;
+  margin: 0 0 110px 0;
 }
 .section-title {
-  margin: 0 0 35px 0;
-  font-size: 30px;
-  color: config.$violetcolor;
-  line-height: 1.2;
-  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  font-size: 48px;
+  font-family: 'Monomakh-Regular';
+  color: config.$textcolor;
+  line-height: 1.0;
 }
-.page-title {
-  margin: 0 0 30px 0;
-  font-size: 75px;
-  text-transform: uppercase;
-  color: config.$violetcolor;
-  line-height: 1;
-}
-.violet-color {
-  color: config.$violetcolor;
-}
-.second-btn {
+.primary-btn {
   display: flex;
-  height: 90px;
-  padding: 0;
-  border: none;
-  border-radius: 10px;
-  background: config.$greengradient;
+  height: 72px;
+  padding: 19px;
+  border: 1px solid config.$redcolor;
+  border-radius: 36px;
+  background-color: config.$beigecolor;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
-  color: config.$violetcolor;
-  text-transform: uppercase;
+  .primary-btn__text {
+    font-family: 'Monomakh-Regular';
+    font-size: 20px;
+    color: config.$textcolor;
+  }
+  .primary-btn__image {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+}
+
+
+/*
+.violet-color {
+  color: config.$beigecolor;
 }
 .input-number {
   -webkit-appearance: textfield;
@@ -104,11 +107,50 @@ p {
 
 // Header
 .header {
-  p {
-    font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  .flex-container {
+    display: flex;
+    padding: 25px 20px;
+    border-radius: 25px;
+    background-color: config.$beigecolor;
+    align-items: center;
+    justify-content: space-between;
   }
-  h4 {
+  .logo {
+    width: 102px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .top-menu-item {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  .top-menu-item__link {
     font-family: 'Monomakh-Regular';
+    font-size: 20px;
+    color: config.$textcolor;
+    transition: color .3s;
+  }
+  .top-menu-item__link:hover {
+    color: config.$redcolor;
+  }
+
+}
+
+// Main section
+.main-section {
+  .main-image {
+    height: 720px;
+  }
+  .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -152,7 +194,7 @@ p {
     margin: 0 auto;
     padding: 40px 60px;
     border-radius: 10px;
-    background-color: config.$lightgreycolor;
+    background-color: config.$greycolor;
     overflow: hidden;
   }
   .modal-close {
@@ -226,7 +268,7 @@ p {
     padding: 0;
     border: none;
     border-radius: 10px;
-    background-color: config.$violetcolor;
+    background-color: config.$beigecolor;
   }
   .modal-submit-btn__text {
     font-size: 30px;
@@ -265,7 +307,7 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 80% 60%;
-    background-color: config.$violetcolor;
+    background-color: config.$beigecolor;
   }
   .custom-checkbox:checked+label::before {
     border: none;
