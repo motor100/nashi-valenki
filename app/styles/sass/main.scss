@@ -101,6 +101,11 @@ p {
     object-fit: cover;
   }
 }
+/*
+.swiper-slide {
+  width: auto !important;
+}
+*/
 
 
 /*
@@ -414,6 +419,51 @@ p {
     z-index: 1;
   }
 }
+
+// Interior section
+.interior-section {
+  .interior-section-slider {
+    position: relative;
+    margin-top: 150px;
+  }
+  .interior-slider {
+    border-radius: 20px;
+  }
+  .swiper-wrapper {
+    height: 530px;
+  }
+  .interior-slider-item {
+    width: 60%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .interior-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: -50px;
+  }
+  .swiper-button-next {
+    left: 55%;
+    right: auto;
+  }
+  .swiper-button-prev {
+    right: 55%;
+    left: auto;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    content: '';
+  }
+
+}
+
+
+
+
 
 // Privacy policy page
 .privacy-policy-page,

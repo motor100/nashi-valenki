@@ -1,4 +1,7 @@
 import IMask from 'imask';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
 
 const body = document.querySelector('body');
 
@@ -17,6 +20,19 @@ if (toTopImage) {
     scroll(0, 0);
   }
 }
+
+// Interior slider
+const InteriorSlider = new Swiper('.interior-slider', {
+  modules: [Navigation],
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
 
 // Input phone mask
 function inputPhoneMask() {
