@@ -131,14 +131,16 @@ checkCookies();
 
 // Окна
 const modalWindows = document.querySelectorAll('.modal-window');
-const callbackModalBtn = document.querySelector('.js-callback-modal-btn');
+const callbackModalBtns = document.querySelectorAll('.js-callback-modal-btn');
 const callbackModal = document.querySelector('#callback-modal');
 const modalCloseBtns = document.querySelectorAll('.modal-window .modal-close');
 
-if (callbackModalBtn) {
-  callbackModalBtn.onclick = function () {
-    modalWindowOpen(callbackModal);
-  }
+if (callbackModalBtns) {
+  callbackModalBtns.forEach((item) => {
+    item.onclick = function () {
+      modalWindowOpen(callbackModal);
+    }
+  });
 }
 
 function modalWindowOpen(win) {
