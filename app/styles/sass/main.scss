@@ -357,6 +357,15 @@ p {
   }
 }
 
+// App section
+.app-section {
+  .white-block {
+    height: 300px;
+    border-radius: 20px;
+    background-color: config.$whitecolor;
+  }
+}
+
 // Privacy pilocy page
 .privacy-policy-page,
 .soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh-page {
