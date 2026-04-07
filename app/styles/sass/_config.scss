@@ -25,6 +25,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
   }
 }
 
+@include font('Manrope-light', italic, 400, '../fonts/Manrope-Light.woff2');
 @include font('Manrope-regular', italic, 400, '../fonts/Manrope-Regular.woff2');
 @include font('Manrope-semibold', italic, 400, '../fonts/Manrope-SemiBold.woff2');
 @include font('Manrope-bold', italic, 400, '../fonts/Manrope-Bold.woff2');
@@ -84,4 +85,5 @@ body {
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
+  background-color: $beigecolor;
 }
