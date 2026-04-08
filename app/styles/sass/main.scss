@@ -138,6 +138,17 @@ p {
   width: 100%;
   z-index: 1;
 }
+.upper-title {
+  display: flex;
+  margin: 0 0 60px 0;
+  gap: 10px;
+  align-items: center;
+}
+.upper-title__text {
+  font-family: 'Monomakh-Regular';
+  font-size: 32px;
+  color: config.$redcolor;
+}
 
 // Header
 .header {
@@ -216,17 +227,6 @@ p {
     display: flex;
     gap: 100px;
     justify-content: space-between;
-  }
-  .upper-title {
-    display: flex;
-    margin: 0 0 60px 0;
-    gap: 10px;
-    align-items: center;
-  }
-  .upper-title__text {
-    font-family: 'Monomakh-Regular';
-    font-size: 32px;
-    color: config.$redcolor;
   }
   .about-description,
   .about-gallery {
@@ -544,7 +544,58 @@ p {
 
 }
 
-
+// Contacts section
+.contacts-section {
+  background: url(../images/dist/bg-big-rhomb.png) center no-repeat;
+  background-size: contain;
+  .flex-container {
+    display: flex;
+    gap: 30px;
+  }
+  .contacts,
+  .map {
+    width: 50%;
+  }
+  .contacts-flex-container {
+    display: flex;
+    margin: 0 0 40px 0;
+    gap: 20px 40px;
+    flex-wrap: wrap;
+  }
+  .contacts-item__title {
+    font-family: 'Monomakh-Regular';
+    font-size: 48px;
+    color: config.$redcolor;
+  }
+  .contacts-item__text {
+    font-family: 'Monomakh-Regular';
+    font-size: 24px;
+  }
+  .booking-btn {
+    display: flex;
+    padding: 19px;
+    border: 1px solid config.$redcolor;
+    border-radius: 36px;
+    background-color: config.$redcolor;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    .booking-btn__text {
+      font-family: 'Monomakh-Regular';
+      font-size: 20px;
+      color: config.$whitecolor;
+    }
+    .booking-btn__image {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+    }
+  }
+  .map {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}
 
 // Privacy policy page
 .privacy-policy-page,
