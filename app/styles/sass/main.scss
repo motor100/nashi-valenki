@@ -158,7 +158,7 @@ p {
   }
   .valenki-menu-item__link {
     font-family: 'Monomakh-Regular';
-    font-size: 20px;
+    font-size: 22px;
     color: config.$textcolor;
     transition: color .3s;
   }
@@ -187,6 +187,9 @@ p {
   }
   .logo img {
     width: 100%;
+  }
+  .booking-btn__text {
+    color: config.$redcolor;
   }
 }
 
@@ -235,6 +238,9 @@ p {
   .about-gallery {
     width: 50%;
   }
+  .about-gallery {
+    height: 663px;
+  }
   .description-text {
     margin-bottom: 40px;
     font-family: 'Manrope-Light';
@@ -268,7 +274,7 @@ p {
     gap: 20px;
   }
   .about-gallery .about-gallery-item {
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     overflow: hidden;
   }
   .about-gallery .about-gallery-item-wide {
@@ -297,14 +303,14 @@ p {
     border-width: 1px;
     border-style: solid;
     border-color: config.$textcolor;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     background-color: config.$whitecolor;
     transition: border-color .3s;
   }
   .menu-item .menu-item__image {
     height: 508px;
     margin-bottom: 40px;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     overflow: hidden;
   }
   .menu-item .menu-item__image img {
@@ -379,7 +385,7 @@ p {
 .app-section {
   .white-block {
     height: 300px;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     background-color: config.$whitecolor;
   }
 }
@@ -389,7 +395,7 @@ p {
   .white-frame {
     position: relative;
     padding: 80px 40px;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     background-color: config.$whitecolor;
     overflow: hidden;
   }
@@ -400,7 +406,7 @@ p {
   .booking-section-title {
     margin-bottom: 10px;
     font-family: 'Monomakh-Regular';
-    font-size: 42px;
+    font-size: 48px;
     color: config.$redcolor;
     line-height: 1;
   }
@@ -414,7 +420,7 @@ p {
   }
   .booking-section-description {
     font-family: 'Manrope-Light';
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.3;    
   }
 }
@@ -426,14 +432,14 @@ p {
     margin-top: 150px;
   }
   .interior-slider {
-    border-radius: 20px;
+    border-radius: config.$borderradius;
   }
   .swiper-wrapper {
     height: 530px;
   }
   .interior-slider-item {
     width: 60%;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     overflow: hidden;
   }
   .interior-slider-item img {
@@ -465,7 +471,7 @@ p {
   .white-frame {
     padding: 40px;
     border: 1px solid config.$textcolor;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     background-color: config.$whitecolor;
   }
   .section-title {
@@ -479,21 +485,27 @@ p {
   }
   .special-offer-item {
     position: relative;
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     background-color: config.$beigecolor;
     overflow: hidden;
   }
   .special-offer-item-blue {
-    padding: 71px 10px 71px 20px;
+    padding: 71px 20px;
   }
-  .special-offer-item__day {
+  .special-offer-wide-flex-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .special-offer-item-wide .special-offer-item__day {
     font-family: 'Monomakh-Regular';
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1;
   }
-  .special-offer-item__time {
+  .special-offer-item-wide .special-offer-item__time {
     font-family: 'Monomakh-Regular';
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1;
   }
   .special-offer-item__location,
@@ -503,6 +515,16 @@ p {
   }
   .special-offer-item-wide {
     margin-bottom: 40px;
+  }
+  .special-offer-item-narrow .special-offer-item__day {
+    font-family: 'Monomakh-Regular';
+    font-size: 24px;
+    line-height: 1;
+  }
+  .special-offer-item-narrow .special-offer-item__time {
+    font-family: 'Monomakh-Regular';
+    font-size: 18px;
+    line-height: 1;
   }
   .flex-container {
     display: flex;
@@ -595,7 +617,7 @@ p {
     }
   }
   .map {
-    border-radius: 20px;
+    border-radius: config.$borderradius;
     overflow: hidden;
   }
 }
@@ -604,6 +626,7 @@ p {
 .rhombs {
   width: 100%;
   height: 89px;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
@@ -654,6 +677,13 @@ p {
   }
   .footer-item {
     margin-bottom: 30px;
+  }
+  .footer-rhombs {
+    width: 100%;
+    overflow: hidden;
+  }
+  .footer-rhombs img {
+    width: 100%;
   }
 }
 
@@ -1051,12 +1081,40 @@ p {
   }
 }
 
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1460px;
+  }
+}
+
 @media only screen and (max-width : 1600px) {
   
+  // Menu section 
+  .menu-section {
+    .menu-item .menu-item__title {
+      font-size: 30px;
+    }
+    .menu-btn .menu-btn__text {
+      font-size: 30px;
+    }
+  }
 }
 
 @media only screen and (max-width : 1400px) {
 
+
+  // Menu section 
+  .menu-section {
+    .menu-item .menu-item__title {
+      font-size: 28px;
+    }
+    .menu-btn {
+      padding: 15px 19px;
+    }
+    .menu-btn .menu-btn__text {
+      font-size: 28px;
+    }
+  }
 }
 
 @media only screen and (max-width : 1200px) {
@@ -1074,6 +1132,12 @@ p {
 }
 
 @media only screen and (max-width : 768px) {
+
+  config.$borderradius: 15px;
+
+  .about-section .about-gallery .about-gallery-item {
+    border-radius: config.$borderradius;
+  }
 
   .hidden-mobile {
     display: none !important;
@@ -1169,6 +1233,11 @@ p {
 
 @media only screen and (max-width : 480px) {
 
+  config.$borderradius: 10px;
+
+  .about-section .about-gallery .about-gallery-item {
+    border-radius: config.$borderradius;
+  }
 
   // We use cookie
   .we-use-cookie {
