@@ -101,16 +101,12 @@ p {
     object-fit: cover;
   }
 }
+.red-color {
+  color: config.$redcolor;
+}
 /*
 .swiper-slide {
   width: auto !important;
-}
-*/
-
-
-/*
-.violet-color {
-  color: config.$beigecolor;
 }
 .input-number {
   -webkit-appearance: textfield;
@@ -127,6 +123,20 @@ p {
 */
 .input-field.required {
   border: 1px solid red !important;
+}
+.rhombs-line-top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.rhombs-line-bottom-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 // Header
@@ -404,20 +414,6 @@ p {
     font-size: 20px;
     line-height: 1.3;    
   }
-  .booking-top-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  .booking-bottom-bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-  }
 }
 
 // Interior section
@@ -461,7 +457,92 @@ p {
 
 }
 
+// Special offer section
+.special-offer-section {
+  .white-frame {
+    padding: 40px;
+    border: 1px solid config.$textcolor;
+    border-radius: 20px;
+    background-color: config.$whitecolor;
+  }
+  .section-title {
+    margin-bottom: 10px;
+  }
+  .special-offer-description {
+    margin-bottom: 40px;
+    font-family: 'Manrope-Light';
+    font-size: 24px;
+    line-height: 1.3;    
+  }
+  .special-offer-item {
+    position: relative;
+    border-radius: 20px;
+    background-color: config.$beigecolor;
+    overflow: hidden;
+  }
+  .special-offer-item-blue {
+    padding: 71px 10px 71px 20px;
+  }
+  .special-offer-item__day {
+    font-family: 'Monomakh-Regular';
+    font-size: 30px;
+    line-height: 1;
+  }
+  .special-offer-item__time {
+    font-family: 'Monomakh-Regular';
+    font-size: 22px;
+    line-height: 1;
+  }
+  .special-offer-item__location,
+  .special-offer-item__enter {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .special-offer-item-wide {
+    margin-bottom: 40px;
+  }
+  .flex-container {
+    display: flex;
+    gap: 40px;
+  }
+  .special-offer-item-red {
+    padding: 80px 40px 80px 120px;
+  }
+  .special-offer-item-flex-container {
+    display: flex;
+    margin: 10px 0;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .special-offer-item__title {
+    font-family: 'Monomakh-Regular';
+    font-size: 30px;
+    line-height: 1;
+  }
+  .special-offer-item__price {
+    font-family: 'Monomakh-Regular';
+    font-size: 28px;
+    color: config.$bluecolor;
+    line-height: 1;
+    .small-text {
+      display: block;
+      font-size: 18px;
+      color: config.$textcolor;
+    }
+  }
 
+  .special-offer-item__text {
+    line-height: 1.3;
+  }
+  .rhombs-line-vertikal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+}
 
 
 
@@ -692,7 +773,7 @@ p {
   height: 45px;
   padding: 0 8px;
   border-radius: 5px;
-  background: config.$violetgradient;
+  background: red;
   cursor: pointer;
   z-index: 12;
   transition: background-color .5s;
@@ -751,7 +832,7 @@ p {
   width: 100%;
   height: 100vh;
   padding: 8px 0 30px 0;
-  background: config.$violetgradient;
+  background: red;
   color: config.$greycolor;
   opacity: 0;
   visibility: hidden;
