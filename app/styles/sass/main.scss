@@ -597,6 +597,17 @@ p {
   }
 }
 
+// Rhombs
+.rhombs {
+  width: 100%;
+  height: 89px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 // Privacy policy page
 .privacy-policy-page,
 .soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh-page {
