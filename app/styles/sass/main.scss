@@ -308,15 +308,6 @@ p {
     display: flex;
     gap: 20px;
   }
-  /*
-  .view-more-btn {
-    background-color: transparent;
-    .view-more-btn__text {
-      color: config.$beigecolor;
-    }
-  }
-  */
-
 }
 
 // About section
@@ -732,7 +723,6 @@ p {
     width: 100%;
     z-index: 1;
   }
-
 }
 
 // Contacts section
@@ -742,6 +732,9 @@ p {
   .flex-container {
     display: flex;
     gap: 30px;
+  }
+  .map {
+    height: 580px;
   }
   .contacts,
   .map {
@@ -1270,32 +1263,159 @@ p {
 }
 
 @media only screen and (max-width : 1600px) {
+
+  .section {
+    margin-bottom: 90px;
+  }
+
+  .section-title {
+    font-size: 46px;
+  }
+
+  .upper-title {
+    margin-bottom: 55px;
+  }
+
+  .secondary-btn {
+    .secondary-btn__text {
+      font-size: 26px;
+    }
+  }
+
+  .white-booking-btn {
+    .white-booking-btn__text {
+      font-size: 26px;
+    }
+  }
+
+  // Main section
+  .main-section {
+    .main-title {
+      font-size: 66px;
+    }
+  }
+
+  // About section
+  .about-section {
+    .about-gallery {
+      height: 687px;
+    }
+  }
   
   // Menu section 
   .menu-section {
+    .menu-item .menu-item__image {
+      height: 529px;
+    }
     .menu-item .menu-item__title {
       font-size: 30px;
     }
-    .menu-btn .menu-btn__text {
-      font-size: 30px;
+  }
+
+  // Booking section
+  .booking-section {
+    .booking-section-title {
+      font-size: 46px;
+    }
+    .booking-section-description {
+      font-size: 22px;
+    }
+  }
+
+  // Interior section
+  .interior-section {
+    .swiper-wrapper {
+      height: 478px;
+    }
+  }
+
+  // Contacts section
+  .contacts-section {
+    .contacts-item__title {
+      font-size: 46px;
+    }
+    .map {
+      height: 569px;
     }
   }
 }
 
 @media only screen and (max-width : 1400px) {
 
+  .upper-title {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 46px;
+  }
+
+  .section {
+    margin-bottom: 80px;
+  }
+
+  // Main section
+  .main-section {
+    .main-title {
+      font-size: 64px;
+    }
+  }
+
+  // About section
+  .about-section {
+    .description-text {
+      font-size: 22px;
+    }
+    .description-advantages .description-advantages-item__number {
+      font-size: 46px;
+    }
+    .about-gallery {
+      height: 703px;
+    }
+  }
 
   // Menu section 
   .menu-section {
+    .menu-item {
+      padding-bottom: 35px;
+    }
+    .menu-item .menu-item__image {
+      height: 451px;
+      margin-bottom: 35px;
+    }
+    .menu-item .menu-item__content {
+      padding: 0 20px;
+    }
     .menu-item .menu-item__title {
-      font-size: 28px;
+      margin-bottom: 35px;
+      font-size: 27px;
     }
     .menu-btn {
-      padding: 15px 19px;
+      padding: 11px 15px;
     }
     .menu-btn .menu-btn__text {
-      font-size: 28px;
+      font-size: 26px;
     }
+  }
+
+  // Booking section
+  .booking-section {
+    .booking-section-description {
+      font-size: 20px;
+    }
+  }
+
+  // Interior section
+  .interior-section {
+    .swiper-wrapper {
+      height: 412px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 115px;
+      height: 65px;
+    }
+  
   }
 }
 
