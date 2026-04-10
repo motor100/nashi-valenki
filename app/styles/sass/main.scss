@@ -61,45 +61,103 @@ p {
   color: config.$textcolor;
   line-height: 1;
 }
-.primary-btn {
-  display: flex;
-  padding: 20px;
-  border: 1px solid config.$redcolor;
-  border-radius: 36px;
-  background-color: config.$beigecolor;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  .primary-btn__text {
-    font-family: 'Monomakh-Regular';
-    font-size: 20px;
-    color: config.$textcolor;
-  }
-  .primary-btn__image {
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-  }
-}
 .secondary-btn {
   display: flex;
   width: max-content;
   padding: 14px 31px;
-  border: 1px solid config.$beigecolor;
+  border-width: 1px;
+  border-style: solid;
+  border-color: config.$beigecolor;
   border-radius: 43px;
   gap: 10px;
   justify-content: center;
   align-items: center;
+  transition: border-color .3s;
   .secondary-btn__text {
     font-family: 'Monomakh-Regular';
     font-size: 28px;
+    color: config.$beigecolor;
+    transition: color .3s;
   }
   .secondary-btn__image {
     width: 34px;
     height: 34px;
-    object-fit: cover;
+  }
+  .secondary-btn__image path {
+    fill: config.$beigecolor;
+    transition: fill .3s;
   }
 }
+.secondary-btn:hover {
+  border-color: config.$redcolor;
+}
+.secondary-btn:hover .secondary-btn__text {
+  color: config.$redcolor;
+}
+.secondary-btn:hover .secondary-btn__image path {
+  fill: config.$redcolor;
+}
+
+// Белый фон красный текст и узор
+.white-booking-btn {
+  display: flex;
+  width: max-content;
+  height: 72px;
+  padding: 14px 31px;
+  border: none;
+  border-radius: 43px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: config.$whitecolor;
+  .white-booking-btn__text {
+    font-family: 'Monomakh-Regular';
+    font-size: 28px;
+    color: config.$redcolor;
+    transition: color .3s;
+  }
+  .white-booking-btn__image {
+    width: 34px;
+    height: 34px;
+  }
+  .white-booking-btn__image path {
+    fill: config.$redcolor;
+    transition: fill .3s;
+  }
+}
+.white-booking-btn:hover .white-booking-btn__text {
+  color: config.$bluecolor;
+}
+.white-booking-btn:hover .white-booking-btn__image path {
+  fill: config.$bluecolor;
+}
+
+// Красный фон белый текст и узор
+.red-booking-btn {
+  display: flex;
+  padding: 20px;
+  border: none;
+  border-radius: 36px;
+  background-color: config.$redcolor;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s;
+  .red-booking-btn__text {
+    font-family: 'Monomakh-Regular';
+    font-size: 20px;
+    color: config.$beigecolor;
+  }
+  .red-booking-btn__image {
+    width: 34px;
+    height: 34px;
+  }
+}
+.red-booking-btn:hover {
+  background-color: config.$bluecolor;
+}
+
+
 .red-color {
   color: config.$redcolor;
 }
@@ -183,12 +241,53 @@ p {
   }
   .logo {
     width: 117px;
+    height: 74px;
+  }
+  .logo-link {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .logo img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .booking-btn__text {
-    color: config.$redcolor;
+  .header-booking-btn {
+    display: flex;
+    padding: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: config.$redcolor;
+    border-radius: 37px;
+    background-color: config.$beigecolor;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: border-color .3s;
+    .header-booking-btn__text {
+      font-family: 'Monomakh-Regular';
+      font-size: 20px;
+      color: config.$redcolor;
+      transition: color .3s;
+    }
+    .header-booking-btn__image {
+      width: 34px;
+      height: 34px;
+    }
+    .header-booking-btn__image path {
+      fill: config.$redcolor;
+      transition: fill .3s;
+    }
+  }
+  .header-booking-btn:hover {
+    border-color: config.$bluecolor;
+  }
+  .header-booking-btn:hover .header-booking-btn__text {
+    color: config.$bluecolor;
+  }
+  .header-booking-btn:hover .header-booking-btn__image path {
+    fill: config.$bluecolor;
   }
 }
 
@@ -209,18 +308,14 @@ p {
     display: flex;
     gap: 20px;
   }
+  /*
   .view-more-btn {
     background-color: transparent;
     .view-more-btn__text {
       color: config.$beigecolor;
     }
   }
-  .booking-btn {
-    background-color: config.$whitecolor;
-    .booking-btn__text {
-      color: config.$redcolor;
-    }
-  }
+  */
 
 }
 
@@ -372,7 +467,7 @@ p {
   .bg-big-rhomb {
     position: absolute;
     top: 6px;
-    left: -60px;
+    left: -120px;
     width: 779px;
     height: 779px;
     z-index: -1;
@@ -381,6 +476,17 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .red-rhombs-vertikal-line .position-relative {
+    position: relative;
+  }
+  .red-rhombs-vertikal-line__image {
+    position: absolute;
+    top: -140px;
+    right: 0;
+    width: 204px;
+    height: 1882px;
+    z-index: -1;
   }
 }
 
@@ -415,19 +521,20 @@ p {
     color: config.$redcolor;
     line-height: 1;
   }
-  .booking-btn {
-    height: 100%;
-    border: 1px solid config.$redcolor;
-    background-color: config.$whitecolor;
-    flex-shrink: 0;
-    .booking-btn__text {
-      color: config.$redcolor;
-    }
-  }
   .booking-section-description {
     font-family: 'Manrope-Light';
     font-size: 24px;
     line-height: 1.3;    
+  }
+  .white-booking-btn {
+    flex-shrink: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: config.$redcolor;
+    transition: border-color .3s;
+  }
+  .white-booking-btn:hover {
+    border-color: config.$bluecolor;
   }
 }
 
@@ -681,16 +788,11 @@ p {
   }
 }
 
-// Rhombs
-.rhombs {
+// Red rhombs line
+.red-rhombs-line {
   width: 100%;
   height: 89px;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+  background: url(../images/red-rhombs-line.png) center no-repeat;
 }
 
 // Footer
@@ -722,9 +824,17 @@ p {
     font-size: 18px;
     color: config.$textcolor;
     text-decoration: underline;
+    transition: color .3s;
   }
-  .footer-authors {
-    text-align: right;
+  .footer-required .privacy-policy:hover {
+    color: config.$redcolor;
+  }
+  .footer-authors .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-authors .author {
+    margin-bottom: 5px;
   }
   .footer-authors .author a {
     margin-bottom: 10px;
@@ -733,17 +843,20 @@ p {
     color: config.$bluecolor;
     line-height: 1;
     text-decoration: underline;
+    transition: color .3s;
+  }
+  .footer-authors .author a:hover {
+    color: config.$redcolor;
   }
   .footer-item {
     margin-bottom: 30px;
   }
-  .footer-rhombs {
+  .blue-rhombs-line {
     width: 100%;
-    overflow: hidden;
+    height: 59px;
+    background: url(../images/blue-rhombs-line.png) center no-repeat;
   }
-  .footer-rhombs img {
-    width: 100%;
-  }
+
 }
 
 // Privacy policy page
@@ -928,18 +1041,20 @@ p {
     max-width: 715px;
     margin: 0 80px 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    background-color: config.$greycolor;
+    border-radius: 20px;
+    background-color: config.$whitecolor;
     align-items: center;
   }
   .we-use-cookie-text {
     padding: 0 20px 0 0;
-    font-size: 14px;
-    color: grey;
+    font-family: 'Manrope-Light';
+    font-size: 16px;
+    color: config.$textcolor;
   }
   .we-use-cookie-text a {
-    font-size: 14px;
-    color: grey;
+    font-family: 'Manrope-Light';
+    font-size: 16px;
+    color: config.$textcolor;
     text-decoration: underline;
   }
   .we-use-cookie-buttons {
@@ -948,18 +1063,37 @@ p {
     gap: 10px;
   }
   .we-use-cookie-close {
-    display: block;
-    width: 93px;
-    height: 40px;
+    display: flex;
+    width: 160px;
+    height: 47px;
     padding: 0;
-    border: 1px solid grey;
-    border-radius: 10px;
-    background-color: config.$greycolor;
-    font-family: inherit;
-    font-size: 14px;
-    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     cursor: pointer;
+  }
+  .we-use-cookie-close-accept {
+    border-color: config.$redcolor;
+    background-color: config.$redcolor;
+    color: config.$whitecolor;
+  }
+  .we-use-cookie-close-dont-accept {
+    border-color: config.$bluecolor;
+    background-color: config.$whitecolor;
+    color: config.$bluecolor;
+  }
+  .we-use-cookie-close__text {
+    font-family: 'Monomakh-Regular';
+    font-size: 18px;
+    line-height: 1;
+  }
+  .we-use-cookie-close__image {
+    width: 23px;
+    height: 23px;
   }
 }
 
@@ -1094,10 +1228,6 @@ p {
   }
   .socials .socials-item img {
     height: 15px;
-  }
-  .address-wrapper {
-    font-family: 'Roboto-SemiBold';
-    font-size: 18px;
   }
 }
 
