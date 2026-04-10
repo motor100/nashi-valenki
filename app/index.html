@@ -465,7 +465,6 @@
       <div class="main-buttons">
         <a href="#about-section" class="view-more-btn secondary-btn">
           <span class="view-more-btn__text secondary-btn__text">Подробнее</span>
-          <!-- <img src="/images/white-rhomb.svg" class="view-more-btn__image secondary-btn__image" alt=""> -->
           <svg class="secondary-btn__image" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.766 22.5106H11.7447V23.4894H10.766V22.5106Z"/>
             <path d="M45.0213 22.5106H44.0426V21.5319H45.0213V22.5106Z"/>
@@ -3830,19 +3829,21 @@
         <div class="modal-close">
           <div class="close"></div>
         </div>
-        <div class="modal-title">ЗАПОЛНИТЕ ФОРМУ ЗАЯВКИ</div>        
+        <div class="upper-title">
+          <div class="upper-title__text">Валенки</div>
+          <img src="/images/dist/heart.png" class="upper-title__image" alt="">
+        </div>
+        <div class="modal-title section-title">Бронь столика в Валенках</div>        
         <form id="callback-modal-form" class="form">
-          <div class="form-group">
-            <label for="name-callback-modal" class="label">Имя <span class="violet-color">*</span></label>
-            <input type="text" name="name" id="name-callback-modal" class="input-field js-required-name" required minlength="3" maxlength="20" autocomplete="on">
-          </div>
-          <div class="form-group">
-            <label for="phone-callback-modal" class="label">Телефон <span class="violet-color">*</span></label>
-            <input type="text" name="phone" id="phone-callback-modal" class="input-field js-required-phone js-input-phone-mask" required size="18" placeholder="+7 (000) 000 00 00" autocomplete="on">
-          </div>
-          <div class="form-group">
-            <label for="message-callback-modal" class="label">Сообщение <span class="violet-color">*</span></label>
-            <input type="text" name="message" id="message-callback-modal" class="input-field js-required-message" required minlength="3" maxlength="250">
+          <div class="flex-container">
+            <div class="form-group">
+              <label for="name-callback-modal" class="label">Ваше имя</label>
+              <input type="text" name="name" id="name-callback-modal" class="input-field js-required-name" required minlength="3" maxlength="25" autocomplete="on">
+            </div>
+            <div class="form-group">
+              <label for="phone-callback-modal" class="label">Ваш номер телефона</label>
+              <input type="text" name="phone" id="phone-callback-modal" class="input-field js-required-phone js-input-phone-mask" required size="18" placeholder="+7 (000) 000 00 00" autocomplete="on">
+            </div>
           </div>
           <div class="agreement-text">
             <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback-modal" required onchange="document.getElementById('callback-modal-submit-btn').disabled = !this.checked;">
@@ -3854,10 +3855,18 @@
             <label for="checkbox-agree-callback-modal" class="custom-checkbox-label"></label>
             <span class="checkbox-text">Согласен на <a href="pdf/soglasie-na-obrabotku-personalnyh-dannyh.pdf" class="agreement-link" target="_blank">обработку персональных данных</a></span>
           </div>
-          <button type="button" id="callback-modal-submit-btn" class="modal-submit-btn">
-            <span class="modal-submit-btn__text">Отправить</span>
+          <div class="agreement-text">
+            <input type="checkbox" name="checkbox-advertise" class="custom-checkbox" id="checkbox-advertise-callback-modal" checked>
+            <label for="checkbox-advertise-callback-modal" class="custom-checkbox-label"></label>
+            <span class="checkbox-text">Согласен на <a href="pdf/soglasie-na-poluchenie-reklamnyh-materialov.pdf" class="agreement-link" target="_blank">получение рекламных материалов</a></span>
+          </div>
+          <button type="button" id="callback-modal-submit-btn" class="modal-submit-btn red-booking-btn">
+            <span class="red-booking-btn__text">Забронировать стол</span>
+            <img src="/images/white-rhomb.svg" class="red-booking-btn__image" alt="">
           </button>
         </form>
+        <div class="modal-rhombs">
+        </div>
       </div>
     </div>
   </div>

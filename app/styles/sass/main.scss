@@ -895,11 +895,11 @@ p {
   }
   .modal-area {
     position: relative;
-    max-width: 980px;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 40px 60px;
-    border-radius: 10px;
-    background-color: config.$greycolor;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: config.$beigecolor;
     overflow: hidden;
   }
   .modal-close {
@@ -931,13 +931,9 @@ p {
   .close::after {
     transform: rotate(-45deg);
   }
-  .modal-title {
-    margin: 0 0 40px 0;
-    padding: 0 40px 0 0;
-    font-family: 'Manrope-regular';
-    font-size: 24px;
-    color: config.$secondgreycolor;
-    line-height: 1.1;
+  .flex-container {
+    display: flex;
+    gap: 30px;
   }
   .form-group {
     margin: 0 0 25px 0;
@@ -945,20 +941,20 @@ p {
   .label {
     display: block;
     margin: 0 0 10px 0;
-    font-family: 'Manrope-regular';
+    font-family: 'Monomakh-Regular';
     font-size: 20px;
-    color: config.$secondgreycolor;
-    line-height: 1.1;
+    line-height: 1;
   }
   .input-field {
     display: block;
-    width: 100%;
-    height: 52px;
-    padding: 5px 10px;
-    border: 1px solid #C8C8C8;
-    border-radius: 7px;
-    font-family: 'Manrope-regular';
+    width: 304px;
+    height: 60px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Monomakh-Regular';
     font-size: 18px;
+    line-height: 1;
     color: config.$textcolor;
     resize: none;
   }
@@ -966,33 +962,30 @@ p {
     color: #C8C8C8;
   }
   .modal-submit-btn {
-    display: block;
-    width: 483px;
-    height: 90px;
-    margin: 50px auto 30px auto;
-    padding: 0;
-    border: none;
-    border-radius: 10px;
-    background-color: config.$beigecolor;
+    margin-top: 30px;
   }
-  .modal-submit-btn__text {
-    font-size: 30px;
-    color: config.$greycolor;
-    text-transform: uppercase;
+  .modal-rhombs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 136px;
+    height: 100%;
+    background: url(../images/modal-rhombs.png) center no-repeat;
+    z-index: 1;
   }
 }
 
 // agreement text галочка соглашения
 .agreement-text {
   display: flex;
-  margin: 15px 0;
-  font-size: 14px;
-  color: config.$secondgreycolor;
+  margin: 6px 0;
+  font-size: 16px;
+  color: config.$textcolor;
   line-height: 1.6;
   align-items: center;
   a {
-    font-size: 14px;
-    color: config.$secondgreycolor;
+    font-size: 16px;
+    color: config.$textcolor;
     text-decoration: underline;
   }
   .custom-checkbox {
@@ -1007,7 +1000,7 @@ p {
     width: 25px;
     height: 25px;
     margin: 3px 10px 3px 0;
-    border: none;
+    border: 1px solid config.$textcolor;
     border-radius: 5px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1015,8 +1008,8 @@ p {
     background-color: config.$beigecolor;
   }
   .custom-checkbox:checked+label::before {
-    border: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23ffffff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    border: 1px solid config.$redcolor;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23BD1622' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
   }
   .custom-checkbox-label {
     display: block;
