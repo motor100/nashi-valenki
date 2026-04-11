@@ -24,8 +24,23 @@ if (toTopImage) {
 // Interior slider
 const InteriorSlider = new Swiper('.interior-slider', {
   modules: [Navigation],
-  slidesPerView: 'auto',
   spaceBetween: 20,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    // when window width is >= 480px
+    480: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+    },
+    // when window width is >= 992px
+    992: {
+        spaceBetween: 20,
+    },
+  },
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
