@@ -200,12 +200,13 @@ p {
   margin: 0 0 60px 0;
   gap: 10px;
   align-items: center;
+  .upper-title__text {
+    font-family: 'Monomakh-Regular';
+    font-size: 32px;
+    color: config.$redcolor;
+  }
 }
-.upper-title__text {
-  font-family: 'Monomakh-Regular';
-  font-size: 32px;
-  color: config.$redcolor;
-}
+
 .valenki-menu {
   width: max-content;
   margin: 0 auto;
@@ -359,7 +360,7 @@ p {
     gap: 20px;
   }
   .about-gallery .about-gallery-item {
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   .about-gallery .about-gallery-item-wide {
@@ -389,14 +390,14 @@ p {
     border-width: 1px;
     border-style: solid;
     border-color: config.$textcolor;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     background-color: config.$whitecolor;
     transition: border-color .3s;
   }
   .menu-item .menu-item__image {
     height: 589px;
     margin-bottom: 40px;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   .menu-item .menu-item__image img {
@@ -485,7 +486,7 @@ p {
 .app-section {
   .white-block {
     height: 300px;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     background-color: config.$whitecolor;
   }
 }
@@ -495,7 +496,7 @@ p {
   .white-frame {
     position: relative;
     padding: 80px 40px;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     background-color: config.$whitecolor;
     overflow: hidden;
   }
@@ -533,18 +534,18 @@ p {
 .interior-section {
   .interior-section-slider {
     position: relative;
-    margin-top: 125px;
+    margin-top: 155px;
   }
   .interior-slider {
-    padding-top: 40px;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
+    overflow: hidden;
   }
   .swiper-wrapper {
     height: 530px;
   }
   .interior-slider-item {
     width: 60%;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   .interior-slider-item img {
@@ -554,7 +555,7 @@ p {
   }
   .swiper-button-next,
   .swiper-button-prev {
-    top: -50px;
+    top: -90px;
     width: 124px;
     height: 70px;
   }
@@ -628,7 +629,7 @@ p {
   .white-frame {
     padding: 40px;
     border: 1px solid config.$textcolor;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     background-color: config.$whitecolor;
   }
   .section-title {
@@ -642,7 +643,7 @@ p {
   }
   .special-offer-item {
     position: relative;
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     background-color: config.$beigecolor;
     overflow: hidden;
   }
@@ -776,7 +777,7 @@ p {
     }
   }
   .map {
-    border-radius: config.$borderradius;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
 }
@@ -1363,6 +1364,9 @@ p {
 
   // About section
   .about-section {
+    .flex-container {
+      gap: 80px;
+    }
     .description-text {
       font-size: 22px;
     }
@@ -1417,10 +1421,238 @@ p {
     }
   
   }
+
+  // Special offer section
+  .special-offer-section {
+    .white-frame {
+      padding: 30px;
+    }
+    .special-offer-description {
+      font-size: 22px;
+    }
+    .special-offer-item-wide {
+      margin-bottom: 30px;
+    }
+    .special-offer-item-wide .special-offer-item__day {
+      font-size: 30px;
+    }
+    .special-offer-item-wide .special-offer-item__time {
+      font-size: 22px;
+    }
+    .special-offer-item__enter,
+    .special-offer-item__location {
+      font-size: 20px;
+    }
+    .flex-container {
+      gap: 30px;
+    }
+    .special-offer-item__title {
+      font-size: 28px;
+    }
+    .special-offer-item__price {
+      font-size: 26px;
+    }
+  }
+
+  // Contacts section
+  .contacts-section {
+    .flex-container {
+      gap: 20px;
+    }
+    .contacts-item__title {
+      font-size: 44px;
+    }
+    .contacts-item__text {
+      font-size: 22px;
+    }
+    .map {
+      height: 549px;
+    }
+  }
 }
 
 @media only screen and (max-width : 1200px) {
 
+  :root {
+    --border-radius: 15px;
+  }
+
+  .section {
+    margin-bottom: 70px;
+  }
+
+  .section-title {
+    font-size: 44px;
+  }
+
+  .secondary-btn {
+    padding: 10px 28px;
+  }
+
+  .white-booking-btn {
+    height: auto;
+    padding: 10px 28px;
+    .white-booking-btn__text {
+      font-size: 24px;
+    }
+  }
+
+  .upper-title {
+    margin-bottom: 40px;
+    .upper-title__text {
+      font-size: 30px;
+    }
+  }
+
+  .valenki-menu {
+    .valenki-menu-item__link {
+      font-size: 20px;
+    }
+  }
+
+  .rhombs-line-top-bg {
+    top: -10px;
+  }
+  .rhombs-line-bottom-bg {
+    bottom: -10px;
+  }
+
+  // Header
+  .header {
+    .logo {
+      width: 100px;
+      height: 63px;
+    }
+    .header-booking-btn {
+      padding: 13px 20px;
+    }
+  }
+
+  // Main section
+  .main-section {
+    height: 650px;
+    padding-top: 202px;
+    .main-title {
+      font-size: 62px;
+    }
+  }
+
+  // About section
+  .about-section {
+    .flex-container {
+      gap: 60px;
+    }
+    .description-text {
+      font-size: 20px;
+    }
+    .about-gallery,
+    .about-gallery .flex-container {
+      gap: 15px;
+    }
+    .description-advantages .description-advantages-item__number {
+      font-size: 42px;
+    }
+    .description-advantages .description-advantages-item__text {
+      font-size: 22px;
+    }
+    .description-advantages {
+      gap: 50px;
+      justify-content: flex-start;
+    }
+    .about-gallery {
+      height: 687px;
+    }
+  }
+
+  // Menu section
+  .menu-section {
+    .red-rhombs-vertikal-line__image {
+      top: -100px;
+      width: 150px;
+      height: 1384px;
+    }
+    .flex-container {
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .menu-item {
+      width: 49%;
+      padding-bottom: 30px;
+    }
+    .menu-item .menu-item__image {
+      margin-bottom: 30px;
+    }
+    .menu-item .menu-item__title {
+      margin-bottom: 30px;
+    }
+    .menu-btn {
+      padding: 9px;
+    }
+    .menu-btn .menu-btn__text {
+      font-size: 24px;
+    }
+  }
+
+  // Booking section
+  .booking-section {
+    .white-frame {
+      padding: 70px 40px;
+    }
+    .flex-container {
+      gap: 30px;
+      flex-direction: column;
+    }
+    .booking-section-title {
+      font-size: 44px;
+    }
+  }
+
+  // Interior section
+  .interior-section {
+    .interior-section-slider {
+      margin-top: 135px;
+    }
+    .swiper-wrapper {
+      height: 345px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: -70px;
+      width: 100px;
+      height: 56px;
+    }
+  }
+  
+  // Special offer section
+  .special-offer-section {
+    .white-frame {
+      padding: 25px;
+    }
+    .special-offer-description {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    .special-offer-item-blue {
+      padding: 65px 20px;
+    }
+    .special-offer-wide-flex-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .special-offer-item-wide .special-offer-item__day {
+      font-size: 28px;
+    }
+    .special-offer-item-wide .special-offer-item__time {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .special-offer-item__enter,
+    .special-offer-item__location {
+      font-size: 18px;
+    }
+  }
+
+  
 }
 
 @media only screen and (max-width : 992px) {
@@ -1435,11 +1667,6 @@ p {
 
 @media only screen and (max-width : 768px) {
 
-  config.$borderradius: 15px;
-
-  .about-section .about-gallery .about-gallery-item {
-    border-radius: config.$borderradius;
-  }
 
   .hidden-mobile {
     display: none !important;
@@ -1535,11 +1762,6 @@ p {
 
 @media only screen and (max-width : 480px) {
 
-  config.$borderradius: 10px;
-
-  .about-section .about-gallery .about-gallery-item {
-    border-radius: config.$borderradius;
-  }
 
   // We use cookie
   .we-use-cookie {
