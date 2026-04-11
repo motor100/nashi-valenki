@@ -1469,6 +1469,13 @@ p {
       height: 549px;
     }
   }
+
+  // Footer
+  .footer {
+    .footer-required .privacy-policy {
+      font-size: 16px;
+    }
+  }
 }
 
 @media only screen and (max-width : 1200px) {
@@ -1495,6 +1502,10 @@ p {
     .white-booking-btn__text {
       font-size: 24px;
     }
+  }
+
+  .red-booking-btn {
+    padding: 15px 20px;
   }
 
   .upper-title {
@@ -1649,6 +1660,49 @@ p {
     .special-offer-item__enter,
     .special-offer-item__location {
       font-size: 18px;
+    }
+    .special-offer-item-flex-container {
+      flex-direction: column;
+    }
+    .special-offer-item-narrow .special-offer-item__day {
+      font-size: 22px;
+    }
+    .special-offer-item-narrow .special-offer-item__time {
+      font-size: 16px;
+    }
+    .special-offer-item__price {
+      font-size: 24px;
+    }
+    .special-offer-item-blue .special-offer-item__price br {
+      display: none;
+    }
+    .special-offer-item-red {
+      padding: 40px 40px 40px 120px;
+    }
+  }
+
+  // Contacts section
+  .contacts-section {
+    .contacts-flex-container {
+      gap: 10px;
+      flex-direction: column;
+    }
+    .contacts-item__title {
+      font-size: 42px;
+    }
+    .contacts-item__text {
+      font-size: 20px;
+    }
+    .map {
+      height: 602px;
+    }
+  }
+
+  // Footer
+  .footer {
+    .footer-required .flex-container {
+      gap: 10px;
+      flex-direction: column;  
     }
   }
 
