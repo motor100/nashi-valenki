@@ -43,8 +43,21 @@ const InteriorSlider = new Swiper('.interior-slider', {
   },
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.interior-section-slider .swiper-button-next',
+    prevEl: '.interior-section-slider .swiper-button-prev',
+  },
+
+});
+
+// Menu slider
+const MenuSlider = new Swiper('.menu-slider', {
+  modules: [Navigation],
+  spaceBetween: 10,
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    nextEl: '.menu-section-slider .swiper-button-next',
+    prevEl: '.menu-section-slider .swiper-button-prev',
   },
 
 });

@@ -493,6 +493,10 @@ p {
     height: 1882px;
     z-index: -1;
   }
+  .menu-section-slider {
+    position: relative;
+    margin-top: 100px;
+  }
 }
 
 // App section
@@ -566,75 +570,74 @@ p {
     height: 100%;
     object-fit: cover;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: -90px;
-    width: 124px;
-    height: 70px;
-  }
-  .swiper-button-next {
-    left: 55%;
-    right: auto;
-  }
-  .swiper-button-prev {
-    right: 55%;
-    left: auto;
-  }
-  .swiper-button-next::after,
-  .swiper-button-prev::after{
-    content: '';
-    display: none;
-  }
-  .swiper-button-next svg,
-  .swiper-button-prev svg {
-    fill: none;
-  }
-  .swiper-button-next svg .round,
-  .swiper-button-prev svg .round {
-    stroke: config.$textcolor;
-  }
-  .swiper-button-next svg .arrow-right,
-  .swiper-button-prev svg .arrow-right {
-    fill: config.$textcolor;
-    transition: fill .3s;
-  }
-  .swiper-button-next svg .arrow-left,
-  .swiper-button-prev svg .arrow-left {
-    stroke: config.$textcolor;
-    transition: stroke .3s;
-  }
-  .swiper-button-next svg .line-right,
-  .swiper-button-prev svg .line-right {
-    stroke: config.$textcolor;
-    transition: stroke .3s;
-  }
-  .swiper-button-next svg .line-left,
-  .swiper-button-prev svg .line-left {
-    fill: config.$textcolor;
-    transition: fill .3s;
-  }
-  .swiper-button-next:hover svg .arrow-right,
-  .swiper-button-prev:hover svg .arrow-right {
-    fill: config.$redcolor;
-  }
-  .swiper-button-next:hover svg .arrow-left,
-  .swiper-button-prev:hover svg .arrow-left {
-    stroke: config.$redcolor;
-  }
-  .swiper-button-next:hover svg .line-right,
-  .swiper-button-prev:hover svg .line-right {
-    stroke: config.$redcolor;
-  }
-  .swiper-button-next:hover svg .line-left,
-  .swiper-button-prev:hover svg .line-left {
-    fill: config.$redcolor;
-  }
+}
 
-  .swiper-button-prev .swiper-navigation-icon,
-  .swiper-button-next .swiper-navigation-icon {
-    display: none;
-  }
-
+.swiper-button-next,
+.swiper-button-prev {
+  top: -90px;
+  width: 124px;
+  height: 70px;
+}
+.swiper-button-next {
+  left: 55%;
+  right: auto;
+}
+.swiper-button-prev {
+  right: 55%;
+  left: auto;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  content: '';
+  display: none;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  fill: none;
+}
+.swiper-button-next svg .round,
+.swiper-button-prev svg .round {
+  stroke: config.$textcolor;
+}
+.swiper-button-next svg .arrow-right,
+.swiper-button-prev svg .arrow-right {
+  fill: config.$textcolor;
+  transition: fill .3s;
+}
+.swiper-button-next svg .arrow-left,
+.swiper-button-prev svg .arrow-left {
+  stroke: config.$textcolor;
+  transition: stroke .3s;
+}
+.swiper-button-next svg .line-right,
+.swiper-button-prev svg .line-right {
+  stroke: config.$textcolor;
+  transition: stroke .3s;
+}
+.swiper-button-next svg .line-left,
+.swiper-button-prev svg .line-left {
+  fill: config.$textcolor;
+  transition: fill .3s;
+}
+.swiper-button-next:hover svg .arrow-right,
+.swiper-button-prev:hover svg .arrow-right {
+  fill: config.$redcolor;
+}
+.swiper-button-next:hover svg .arrow-left,
+.swiper-button-prev:hover svg .arrow-left {
+  stroke: config.$redcolor;
+}
+.swiper-button-next:hover svg .line-right,
+.swiper-button-prev:hover svg .line-right {
+  stroke: config.$redcolor;
+}
+.swiper-button-next:hover svg .line-left,
+.swiper-button-prev:hover svg .line-left {
+  fill: config.$redcolor;
+}
+.swiper-button-prev .swiper-navigation-icon,
+.swiper-button-next .swiper-navigation-icon {
+  display: none;
 }
 
 // Special offer section
@@ -1444,12 +1447,12 @@ p {
     .swiper-wrapper {
       height: 412px;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 115px;
-      height: 65px;
-    }
-  
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 115px;
+    height: 65px;
   }
 
   // Special offer section
@@ -1659,12 +1662,13 @@ p {
     .swiper-wrapper {
       height: 345px;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      top: -70px;
-      width: 100px;
-      height: 56px;
-    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: -70px;
+    width: 100px;
+    height: 56px;
   }
   
   // Special offer section
@@ -1868,15 +1872,16 @@ p {
     .interior-section-slider {
       margin-top: 115px;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 80px;
-      height: 45px;
-      top: -60px;
-    }
     .swiper-wrapper {
       height: 257px;
     }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 80px;
+    height: 45px;
+    top: -60px;
   }
 
   // Special offer section
