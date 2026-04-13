@@ -294,6 +294,13 @@ p {
   .header-booking-btn:hover .header-booking-btn__image path {
     fill: config.$bluecolor;
   }
+  .burger-menu {
+    width: 46px;
+    height: 46px;
+  }
+  .burger-menu img {
+    width: 100%;
+  }
 }
 
 // Main section
@@ -1091,6 +1098,7 @@ p {
 }
 
 /* burger menu */
+/*
 .burger-menu-wrapper {
   position: fixed;
   top: 14px;
@@ -1130,25 +1138,8 @@ p {
   .burger-menu::after {
     top: 32px;
   }
-  /*
-  &.menu-is-open {
-    background: transparent;
-  }
-  &.menu-is-open .burger-menu::before,
-  &.menu-is-open .burger-menu::after {
-    top: 21px;
-  }
-  &.menu-is-open .burger-menu::before {
-    transform: rotate(-45deg);
-  }
-  &.menu-is-open .burger-menu::after {
-    transform: rotate(45deg);
-  }
-  &.menu-is-open .burger-menu span {
-    display: none;
-  }
-  */
 }
+*/
 
 /* mobile menu */
 .mobile-menu {
@@ -1970,6 +1961,99 @@ p {
     display: block !important;
   }
 
+  .section-title {
+    margin-bottom: 25px;
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .secondary-btn {
+    .secondary-btn__text {
+      font-size: 20px
+    }
+    .secondary-btn__image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  .white-booking-btn {
+    .white-booking-btn__text {
+      font-size: 20px
+    }
+    .white-booking-btn__image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .upper-title {
+    flex-direction: column;
+    .upper-title__text {
+      font-size: 32px;
+      order: 2;
+    }
+    .upper-title__image {
+      width: 168px;
+      height: 122px;
+      order: 1;
+    }
+  }
+    
+
+  // Header
+  .header {
+    .logo {
+      width: 73px;
+      height: 46px;
+    }
+    .flex-container {
+      padding: 15px;
+    }
+    .header-booking-btn {
+      display: flex;
+      padding: 10px 12px;
+    }
+    .header-booking-btn .header-booking-btn__text {
+      font-size: 16px;
+    }
+    .header-booking-btn .header-booking-btn__image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  // Main section
+  .main-section {
+    padding-top: 150px;
+    .main-title {
+      font-size: 48px;
+      text-align: center;
+    }
+    .main-buttons {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+  }
+
+  // About section
+  .about-section {
+    .description-advantages {
+      gap: 20px;
+      justify-content: center;
+    }
+    .description-advantages-item {
+      width: 40%;
+      text-align: center;
+    }
+  }
+
+  // Menu section
+  .menu-section {
+
+  }
+
   // Privacy pilocy page
   .privacy-policy-page,
   .soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh-page {
@@ -2012,11 +2096,6 @@ p {
     }
   }
 
-
-  /* burger menu */
-  .burger-menu-wrapper {
-    display: block;
-  }
 
   /* mobile menu */
   .mobile-menu {
