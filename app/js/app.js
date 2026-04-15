@@ -79,28 +79,26 @@ inputPhoneMask();
 
 
 // Mobile menu
-const burgerMenuWrapper = document.querySelector('.burger-menu-wrapper');
+const burgerMenu = document.querySelector('.burger-menu');
+const menuClose = document.querySelector('.menu-close');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 function openMobileMenu() {
   body.classList.add('overflow-hidden');
   mobileMenu.classList.add('active');
-  burgerMenuWrapper.classList.add('menu-is-open');
 }
 
 function closeMobileMenu() {
   body.classList.remove('overflow-hidden');
-  burgerMenuWrapper.classList.remove('menu-is-open');
   mobileMenu.classList.remove('active');
 }
 
+burgerMenu.onclick = function() {
+  openMobileMenu();
+}
 
-burgerMenuWrapper.onclick = function() {
-  if (burgerMenuWrapper.classList.contains('menu-is-open')) {
-    closeMobileMenu();
-  } else {
-    openMobileMenu();
-  }
+menuClose.onclick = function() {
+  closeMobileMenu();
 }
 
 const listParentClick = document.querySelectorAll('.mobile-menu li.menu-item a');

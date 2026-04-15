@@ -827,6 +827,9 @@ p {
     width: 32px;
     height: 32px;
   }
+  .footer-social-item img {
+    width: 100%;
+  }
   .footer-required .flex-container {
     display: flex;
     align-items: center;
@@ -868,7 +871,6 @@ p {
     height: 59px;
     background: url(../images/blue-rhombs-line.png) center no-repeat;
   }
-
 }
 
 // Privacy policy page
@@ -910,38 +912,17 @@ p {
     max-width: 920px;
     margin: 0 auto;
     padding: 40px;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     background-color: config.$beigecolor;
     overflow: hidden;
   }
   .modal-close {
     position: absolute;
-    top: 40px;
-    right: 60px;
+    top: 48px;
+    right: 130px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
-  }
-  .close {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    border-radius: 3px;
-  }
-  .close::before,
-  .close::after { 
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: 12px;
-    width: 3px;
-    height: 30px;
-    background-color: #868686;
-    border-radius: 2px;
-  }
-  .close::before {
-    transform: rotate(45deg);
-  }
-  .close::after {
-    transform: rotate(-45deg);
   }
   .flex-container {
     display: flex;
@@ -983,6 +964,7 @@ p {
     width: 136px;
     height: 100%;
     background: url(../images/modal-rhombs.png) center no-repeat;
+    background-size: cover;
     z-index: 1;
   }
 }
@@ -1154,9 +1136,8 @@ p {
   display: none;
   width: 100%;
   height: 100vh;
-  padding: 8px 0 30px 0;
-  background: red;
-  color: config.$greycolor;
+  padding: 70px 0 30px 0;
+  background-color: config.$beigecolor;
   opacity: 0;
   visibility: hidden;
   z-index: 16;
@@ -1165,58 +1146,38 @@ p {
     opacity: 1;
     visibility: visible;
   }
+  .flex-container {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
   .logo {
     display: block;
-    width: 140px;
-    margin: 0 0 30px 0;
+    width: 88px;
   }
   .logo img {
     width: 100%;
   }
-  .search-form {
+  .mwnu-close img {
+    width: 32px;
+    height: 32px;
+  }
+  .valenki-menu-item {
     margin-bottom: 30px;
-  }
-  .menu {
-    margin: 0 0 20px 0;
-    padding: 0;
-    list-style: none;
-  }
-  .menu-item {
-    display: block;
-    padding: 10px 0;
-  }
-  .menu-item a {
-    font-size: 18px;
-    color: config.$greycolor;
-    text-decoration: none;
-  }
-  .menu-item__link {
-    text-transform: uppercase;
-  }
-  .submenu {
-    padding-top: 10px;
-    list-style: none;
-  }
-  .submenu-item {
-    padding: 5px 0;
   }
   .socials {
     display: flex;
-    margin: 0 0 20px 0;
     gap: 10px;
-  }
-  .socials .socials-item {
-    display: flex;
-    width: 58px;
-    height: 35px;
-    border: 1px solid config.$greycolor;
-    border-radius: 10px;
-    overflow: hidden;
-    align-items: center;
     justify-content: center;
   }
+  .socials .socials-item {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
   .socials .socials-item img {
-    height: 15px;
+    width: 100%;
   }
 }
 
@@ -1758,7 +1719,12 @@ p {
     }
   }
 
-
+  // Modal
+  .modal-window {
+    .modal-rhombs {
+      width: 116px;
+    }
+  }
   
 }
 
@@ -2127,7 +2093,6 @@ p {
     font-size: 14px;
   }
 
-
   // Modal
   .modal-window {
     .modal-area {
@@ -2136,18 +2101,6 @@ p {
     .modal-title {
       margin-bottom: 20px;
       font-size: 20px;
-    }
-    .modal-close {
-      top: 32px;
-      right: 40px;
-    }
-    .close {
-      width: 20px;
-      height: 20px;
-    }  
-    .close::after,
-    .close::before {
-      height: 25px;
     }
     .modal-submit-btn {
       width: 200px;
@@ -2162,7 +2115,6 @@ p {
       font-size: 16px;
     }
   }
-
 
   /* mobile menu */
   .mobile-menu {
@@ -2269,6 +2221,13 @@ p {
     }
   }
 
+  .valenki-menu {
+    .valenki-menu-item {
+      display: block;
+      text-align: center;
+    }
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     width: 70px;
@@ -2313,14 +2272,6 @@ p {
     }
   }
 
-  // Footer
-  .footer {
-    .valenki-menu-item {
-      display: block;
-      text-align: center;
-    }
-  }
-
   // We use cookie
   .we-use-cookie {
     .we-use-cookie-text {
@@ -2355,6 +2306,5 @@ p {
       padding: 25px 15px;
     }
   }
-
 
 }
