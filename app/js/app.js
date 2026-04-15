@@ -32,7 +32,7 @@ const InteriorSlider = new Swiper('.interior-slider', {
         spaceBetween: 10,
     },
     // when window width is >= 480px
-    480: {
+    576: {
         slidesPerView: 'auto',
         spaceBetween: 15,
     },

@@ -771,6 +771,8 @@ p {
   .contacts-item__text {
     font-family: 'Monomakh-Regular';
     font-size: 24px;
+    color: config.$textcolor;
+    text-decoration: none;
   }
   .booking-btn {
     display: flex;
@@ -2004,7 +2006,6 @@ p {
       order: 1;
     }
   }
-    
 
   // Header
   .header {
@@ -2056,7 +2057,68 @@ p {
 
   // Menu section
   .menu-section {
+    .menu-btn {
+      padding: 5px;
+    }
+    .menu-item .menu-item__title {
+      font-size: 24px;
+    }
+    .menu-btn .menu-btn__text {
+      font-size: 20px;
+    }
+    .bg-big-rhomb {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  }
 
+  // Booking section
+  .booking-section {
+    .booking-section-title {
+      font-size: 36px;
+    }
+    .booking-section-description {
+      font-size: 18px;
+    }
+  }
+
+  // Contacts section
+  .contacts-section {
+    .flex-container {
+      gap: 40px;
+    }
+    .contacts-flex-container {
+      justify-content: center;
+    }
+    .contacts-item {
+      width: 100%;
+      text-align: center;
+    }
+    .contacts-item__title {
+      font-size: 32px;
+    }
+    .red-booking-btn {
+      margin: 0 auto;
+    }
+    .white-booking-btn {
+      margin: 0 auto 15px auto;
+      border: 1px solid config.$redcolor;
+    }
+  }
+
+  // Footer
+  .footer {
+    .footer-authors .flex-container {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .footer-authors .authors {
+      text-align: center;
+    }
   }
 
   // Privacy pilocy page
@@ -2122,6 +2184,61 @@ p {
 
 @media only screen and (max-width : 576px) {
 
+  .section-title {
+    font-size: 34px;
+  }
+
+  .upper-title {
+    .upper-title__image {
+      width: 145px;
+      height: 105px;
+    }
+    .upper-title__text {
+      font-size: 28px;
+    }
+  }
+
+  // Main section
+  .main-section {
+    .main-title {
+      font-size: 44px;
+    }
+  }
+
+  // About section
+  .about-section {
+    .description-advantages .description-advantages-item__number {
+      font-size: 34px;
+    }
+  }
+
+  // Menu section
+  .menu-section {
+    .menu-item {
+      margin-bottom: 1px;
+    }
+  }
+  
+  // Booking section
+  .booking-section {
+    .booking-section-title {
+      font-size: 32px;
+    }
+  }
+
+  // Special offer section
+  .special-offer-section {
+    .special-offer-item__enter,
+    .special-offer-item__location {
+      font-size: 16px;
+    }
+    .rhombs-line-vertikal-bg {
+      left: -37px;
+    }
+    .special-offer-item-red {
+      padding-left: 80px;
+    }
+  }
 
   // We use cookie
   .we-use-cookie {
@@ -2141,6 +2258,68 @@ p {
 
 @media only screen and (max-width : 480px) {
 
+  .section-title {
+    font-size: 30px;
+  }
+
+  .upper-title {
+    .upper-title__image {
+      width: 120px;
+      height: 86px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 70px;
+    height: 39px;
+  }    
+
+  // Header
+  .header {
+    .header-booking-btn {
+      display: none;
+    }
+  }
+
+  // Booking section
+  .booking-section {
+    .white-frame {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .booking-section-title {
+      font-size: 28px;
+    }
+  }
+
+  // Special offer section
+  .special-offer-section {
+    .white-frame {
+      padding: 15px;
+    }
+    .special-offer-item-wide .special-offer-item__day {
+      font-size: 24px;
+    }
+    .special-offer-item-wide .special-offer-item__time {
+      font-size: 18px;
+    }
+    .section-title {
+      text-align: left;
+    }
+    .special-offer-item-red {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  // Footer
+  .footer {
+    .valenki-menu-item {
+      display: block;
+      text-align: center;
+    }
+  }
 
   // We use cookie
   .we-use-cookie {
@@ -2159,6 +2338,16 @@ p {
 }
 
 @media only screen and (max-width : 360px) {
+
+  // Special offer section
+  .special-offer-section {
+    .rhombs-line-vertikal-bg {
+      display: none;
+    }
+    .special-offer-item-red {
+      padding: 20px;
+    }
+  }
 
   // Modal
   .modal-window {
