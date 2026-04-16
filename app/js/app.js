@@ -31,7 +31,7 @@ const InteriorSlider = new Swiper('.interior-slider', {
         slidesPerView: 1,
         spaceBetween: 10,
     },
-    // when window width is >= 480px
+    // when window width is >= 576px
     576: {
         slidesPerView: 'auto',
         spaceBetween: 15,
@@ -101,7 +101,7 @@ menuClose.onclick = function() {
   closeMobileMenu();
 }
 
-const listParentClick = document.querySelectorAll('.mobile-menu li.menu-item a');
+const listParentClick = document.querySelectorAll('.mobile-menu .valenki-menu-item__link');
 
 for (let i=0; i < listParentClick.length; i++) {
   listParentClick[i].onclick = function (event) {
@@ -240,12 +240,6 @@ function ajaxCallback(form) {
   const inputPhone = form.querySelector('.js-required-phone');
   if (inputPhone.value.length != 18) {
     inputPhone.classList.add('required');
-    arr.push(false);
-  }
-
-  const inputMessage = form.querySelector('.js-required-message');
-  if (inputMessage.value.length < 3 || inputMessage.value.length > 250) {
-    inputMessage.classList.add('required');
     arr.push(false);
   }
 

@@ -22,7 +22,7 @@
             <img src="/images/logo.svg" alt="">
           </a>
         </div>
-        <div class="valenki-menu">
+        <div class="valenki-menu hidden-mobile">
           <div class="valenki-menu-item">
             <a href="#menu-section" class="valenki-menu-item__link">Меню</a>
           </div>
@@ -456,6 +456,9 @@
             <path d="M17.0213 29.9574V29.2766H16.3404V29.9574H17.0213Z"/>
           </svg>
         </button>
+        <div class="burger-menu hidden-desktop">
+          <img src="/images/burger-menu.svg" alt="">
+        </div>
       </div>
     </div>
   </header>
@@ -1313,11 +1316,9 @@
   <div class="red-rhombs-line"></div>
 
   <footer class="footer">
-    
     <div class="footer-logo footer-item">
       <img src="/images/logo-big.svg" alt="">
     </div>
-
     <div class="valenki-menu footer-item">
       <div class="valenki-menu-item">
         <a href="#menu-section" class="valenki-menu-item__link">Меню</a>
@@ -1332,7 +1333,6 @@
         <a href="#contacts-section" class="valenki-menu-item__link">Контакты</a>
       </div>
     </div>
-
     <div class="footer-social footer-item">
       <a href="#" class="footer-social-item">
         <img src="/images/vk.png" alt="">
@@ -1341,7 +1341,6 @@
         <img src="/images/tg.png" alt="">
       </a>
     </div>
-
     <div class="footer-required footer-item">
       <div class="container">
         <div class="flex-container">
@@ -1357,7 +1356,6 @@
         </div>
       </div>
     </div>
-
     <div class="footer-authors footer-item">
       <div class="container">
         <div class="flex-container">
@@ -1371,65 +1369,63 @@
             </div>
           </div>
         </div>
-        
       </div>
     </div>
-
     <div class="blue-rhombs-line"></div>
-
   </footer>
-
-  <div class="burger-menu-wrapper">
-    <div class="burger-menu">
-      <span class="span"></span>
-    </div>
-  </div>
 
   <div class="mobile-menu">
     <div class="container">
-      <div class="logo">
-        <!-- <img src="/images/dist/favicon.svg" alt=""> -->
-        <img src="/images/favicon.svg" alt="">
+      <div class="flex-container">
+        <div class="logo">
+          <img src="/images/logo.svg" alt="">
+        </div>
+        <div class="menu-close">
+          <img src="/images/close.svg" alt="">
+        </div>
+      </div>      
+
+      <div class="valenki-menu">
+        <div class="valenki-menu-item">
+          <a href="#menu-section" class="valenki-menu-item__link">Меню</a>
+        </div>
+        <div class="valenki-menu-item">
+          <a href="#special-offer-section" class="valenki-menu-item__link">Банкеты</a>
+        </div>
+        <div class="valenki-menu-item">
+          <a href="#about-section" class="valenki-menu-item__link">О нас</a>
+        </div>
+        <div class="valenki-menu-item">
+          <a href="#contacts-section" class="valenki-menu-item__link">Контакты</a>
+        </div>
       </div>
-      <ul class="menu">
-        <li class="menu-item">
-          <a href="/products.html" class="menu-item__link">Продукция</a>
-          <ul class="submenu">
-            <li class="submenu-item">
-              <a href="/products.html#tekhnicheskie-plenki">Технические пленки</a>
-            </li>
-            <li class="submenu-item">
-              <a href="/products.html#termousadochnye-plenki">Термоусадочные пленки</a>
-            </li>
-            <li class="submenu-item">
-              <a href="/products.html#strejch-hud">Стрейч-худ</a>
-            </li>
-            <li class="submenu-item">
-              <a href="/products.html#plenki-s-logotipom">Пленки с логотипом</a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="/about.html" class="menu-item__link">О компании</a>
-        </li>
-        <li class="menu-item">
-          <a href="/contacts.html" class="menu-item__link">Контакты</a>
-        </li>
-        <li class="menu-item">
-          <a href="/calculator.html" class="menu-item__link">Калькулятор</a>
-        </li>
-      </ul>
-      <div class="mobile-phone">
-        <a href="#" class="mobile-phone__link whatsapp">
-          <!-- <img src="images/dist/whatsapp.png" alt=""> -->
-          <img src="/images/favicon.svg" alt="">
-        </a>
-        <a href="" class="mobile-phone__link telegram">
-          <!-- <img src="images/dist/telegram.png" alt=""> -->
-          <img src="/images/favicon.svg" alt="">
-        </a>
-        <span class="phone">+7 (909) 555 89 87</span>
+
+      <div class="contacts-section">
+        <div class="contacts-flex-container">
+          <div class="contacts-item">
+            <div class="contacts-item__title">Адрес</div>
+            <div class="contacts-item__text">Миасс, пр. Октября 26</div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item__title">Телефон</div>
+            <a href="tel:+7900024242" class="contacts-item__text">+7 (900) 024-24-28</a>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item__title">Режим работы</div>
+            <div class="contacts-item__text">Будни: 07:30-22:00<br>Выходные: 10:00-23:00</div>
+          </div>
+        </div>
       </div>
+
+      <div class="socials">
+        <a href="#" class="social-item">
+          <img src="/images/vk.png" alt="">
+        </a>
+        <a href="#" class="social-item">
+          <img src="/images/tg.png" alt="">
+        </a>
+      </div>
+
     </div>
   </div>
 
@@ -1453,11 +1449,11 @@
     <div class="modal-wrapper">
       <div class="modal-area">
         <div class="modal-close">
-          <div class="close"></div>
+          <img src="/images/close.svg" alt="">
         </div>
         <div class="upper-title">
           <div class="upper-title__text">Валенки</div>
-          <img src="/images/dist/heart.png" class="upper-title__image" alt="">
+          <img src="/images/heart.svg" class="upper-title__image" alt="">
         </div>
         <div class="modal-title section-title">Бронь столика в Валенках</div>        
         <form id="callback-modal-form" class="form">

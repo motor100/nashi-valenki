@@ -4,13 +4,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 if (isset($_POST["name"]) &&
    isset($_POST["phone"]) && 
-   isset($_POST["message"]) && 
    isset($_POST["checkbox-read"]) && 
    isset($_POST["checkbox-agree"])) {
 
     $name = htmlspecialchars($_POST["name"]);
     $phone = htmlspecialchars($_POST["phone"]);
-    $message = htmlspecialchars($_POST["message"]);
     $checkbox_read = $_POST["checkbox-read"];
     $checkbox_agree = $_POST["checkbox-agree"];
 
@@ -44,21 +42,19 @@ if (isset($_POST["name"]) &&
     }
 
     // Тема письма
-    $mail->Subject = 'Сообщение с сайта zhk1.ru';
+    $mail->Subject = 'Сообщение с сайта Наши Валенки';
 
     $mail->isHTML(true);
 
     if (strlen($name) >= 3 &&
       strlen($name) <= 50 &&
       strlen($phone) == 18 && 
-      strlen($message) >= 3 &&
-      strlen($message) <= 100 &&
       $checkbox_read == "on" && 
       $checkbox_agree == "on") {
 
         // Тело письма
-        $mail->Body = "Имя: $name<br> Телефон: $phone<br> Сообщение: $message<br>";
-        $mail->AltBody = "Имя: $name\r\n Телефон: $phone\r\n Сообщение: $message\r\n";
+        $mail->Body = "Имя: $name<br> Телефон: $phone<br>";
+        $mail->AltBody = "Имя: $name\r\n Телефон: $phone\r\n";
 
         $mail->send();
     }
