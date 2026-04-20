@@ -21,15 +21,13 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
     font-family: $fname;
     font-style: $fstyle;
     font-weight: $fweight;
-    src: url($furl) format('woff2');
+    src: url($furl) format("truetype");
   }
 }
 
-@include font('Manrope-light', italic, 400, '../fonts/Manrope-Light.woff2');
-@include font('Manrope-regular', italic, 400, '../fonts/Manrope-Regular.woff2');
-@include font('Manrope-semibold', italic, 400, '../fonts/Manrope-SemiBold.woff2');
-@include font('Manrope-bold', italic, 400, '../fonts/Manrope-Bold.woff2');
-@include font('Monomakh-Regular', italic, 400, '../fonts/Monomakh-Regular.woff2');
+@include font('Manrope-Light', italic, 400, '../fonts/Manrope-Light.ttf');
+@include font('Manrope-Regular', italic, 400, '../fonts/Manrope-Regular.ttf');
+@include font('Monomakh-Regular', italic, 400, '../fonts/Monomakh-Regular.ttf');
 
 // GENERAL CSS SETTINGS
 * {

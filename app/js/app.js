@@ -79,7 +79,7 @@ inputPhoneMask();
 
 
 // Mobile menu
-const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenu = document.querySelectorAll('.burger-menu');
 const menuClose = document.querySelector('.menu-close');
 const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -93,9 +93,11 @@ function closeMobileMenu() {
   mobileMenu.classList.remove('active');
 }
 
-burgerMenu.onclick = function() {
-  openMobileMenu();
-}
+burgerMenu.forEach((item) => {
+  item.onclick = function() {
+    openMobileMenu();
+  }
+});
 
 menuClose.onclick = function() {
   closeMobileMenu();
@@ -283,3 +285,55 @@ if (callbackSubmitBtn) {
     ajaxCallback(callbackForm);
   }
 }
+
+
+// Закреп header
+const header = document.querySelector('.header');
+
+// Показать header при скролле
+window.onscroll = () => {
+  
+  let scrToTop = window.scrollY || document.documentElement.scrollTop;
+  
+  if (scrToTop > 800) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+
+}
+
+
+const bottom = document.querySelector('.bottom-menu');
+
+// Показать bottom menu при скролле
+window.onscroll = () => {
+  
+  let scrToTop = window.scrollY || document.documentElement.scrollTop;
+  
+  if (scrToTop > 500) {
+    bottom.classList.add('active');
+  } else {
+    bottom.classList.remove('active');
+  }
+
+}
+
+
+// Скрытие Яндекс карты на мобильных устройствах
+function hideYandexMap() {
+  let width = window.innerWidth;
+  const map = document.querySelector('.map');
+
+  if (width < 768) {
+    map.innerHTML = '';
+  }
+  
+  return;
+}
+
+hideYandexMap();
+
+window.addEventListener('resize', () => {
+  hideYandexMap();
+});
