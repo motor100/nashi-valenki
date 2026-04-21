@@ -289,6 +289,7 @@ if (callbackSubmitBtn) {
 
 // Закреп header
 const header = document.querySelector('.header');
+const bottomMenu = document.querySelector('.bottom-menu');
 
 // Показать header при скролле
 window.onscroll = () => {
@@ -301,20 +302,10 @@ window.onscroll = () => {
     header.classList.remove('active');
   }
 
-}
-
-
-const bottom = document.querySelector('.bottom-menu');
-
-// Показать bottom menu при скролле
-window.onscroll = () => {
-  
-  let scrToTop = window.scrollY || document.documentElement.scrollTop;
-  
   if (scrToTop > 500) {
-    bottom.classList.add('active');
+    bottomMenu.classList.add('active');
   } else {
-    bottom.classList.remove('active');
+    bottomMenu.classList.remove('active');
   }
 
 }

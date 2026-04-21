@@ -27,7 +27,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 
 @include font('Manrope-Light', italic, 400, '../fonts/Manrope-Light.ttf');
 @include font('Manrope-Regular', italic, 400, '../fonts/Manrope-Regular.ttf');
-@include font('Monomakh-Regular', italic, 400, '../fonts/Monomakh-Regular.ttf');
+//@include font('Monomakh', italic, 400, '../fonts/Monomakh-Regular.ttf');
 
 // GENERAL CSS SETTINGS
 * {
