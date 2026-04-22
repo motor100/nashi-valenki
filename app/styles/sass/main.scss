@@ -220,7 +220,7 @@ p {
   top: 20px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 20;
   &.active {
     position: fixed;
   }  
@@ -761,7 +761,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: max-content;
     z-index: 1;
   }
 }
@@ -2113,6 +2113,12 @@ p {
 
   // Special offer section
   .special-offer-section {
+    .special-offer-wide-flex-container {
+      gap: 0;
+    }
+    .special-offer-item__title {
+      margin-bottom: 20px;
+    }
     .white-booking-btn {
       display: flex;
     }
@@ -2489,6 +2495,8 @@ p {
       font-size: 16px;
     }
     .section-title {
+      margin-bottom: 20px;
+      font-size: 26px;
       text-align: left;
     }
     .special-offer-item-blue {
@@ -2500,14 +2508,8 @@ p {
       padding-bottom: 15px;
       padding-left: 55px;
     }
-    .special-offer-wide-flex-container {
-      gap: 15px;
-    }
     .special-offer-item-wide {
       margin-bottom: 15px;
-    }
-    .section-title {
-      font-size: 26px;
     }
     .special-offer-item__title {
       font-size: 24px;

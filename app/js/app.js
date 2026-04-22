@@ -64,14 +64,20 @@ const MenuSlider = new Swiper('.menu-slider', {
 
 
 // Special offer accordeon
-const specialOfferAccordeonBtn = document.getElementById('special-offer-accordeon-btn');
-const specialOfferAccordeon = document.getElementById('special-offer-accordeon');
+const specialOfferItems = document.querySelectorAll('.js-special-offer-item');
 
-if (specialOfferAccordeonBtn) {
-  specialOfferAccordeonBtn.onclick = function() {
-    specialOfferAccordeonBtn.classList.add('hidden');
-    specialOfferAccordeon.classList.add('active');
-  }
+if (specialOfferItems) {
+
+  specialOfferItems.forEach((item) => {
+    const accordeonBtn = item.querySelector('.special-offer-accordeon-btn');
+    const accordeon = item.querySelector('.special-offer-accordeon');
+
+    accordeonBtn.onclick = function() {
+      accordeonBtn.classList.add('hidden');
+      accordeon.classList.add('active');
+    }
+  });
+
 }
 
 
