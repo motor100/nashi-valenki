@@ -62,6 +62,19 @@ const MenuSlider = new Swiper('.menu-slider', {
 
 });
 
+
+// Special offer accordeon
+const specialOfferAccordeonBtn = document.getElementById('special-offer-accordeon-btn');
+const specialOfferAccordeon = document.getElementById('special-offer-accordeon');
+
+if (specialOfferAccordeonBtn) {
+  specialOfferAccordeonBtn.onclick = function() {
+    specialOfferAccordeonBtn.classList.add('hidden');
+    specialOfferAccordeon.classList.add('active');
+  }
+}
+
+
 // Input phone mask
 function inputPhoneMask() {
   const elementPhone = document.querySelectorAll('.js-input-phone-mask');
@@ -150,22 +163,22 @@ function checkCookies() {
   const cookieBtnDontAccept = cookieNote.querySelector('#cookie_dont_accept');
 
   // Если куки we-use-cookie нет или она просрочена, то показываем уведомление
-  if (!getCookie('we_use_cookie')) {
+  if (!getCookie('we-use-cookie')) {
     cookieNote.classList.add('active');
   }
 
-  if (getCookie('we_use_cookie') == 'true') {
+  if (getCookie('we-use-cookie') == 'true') {
     loadMetrica();
   }
 
   cookieBtnAccept.addEventListener('click', function () {
-    setCookie('we_use_cookie', 'true', 365);
+    setCookie('we-use-cookie', 'true', 365);
     cookieNote.classList.remove('active');
     loadMetrica();
   });
 
   cookieBtnDontAccept.addEventListener('click', function () {
-    setCookie('we_use_cookie', 'false', 10);
+    setCookie('we-use-cookie', 'false', 10);
     cookieNote.classList.remove('active');
   });
 }

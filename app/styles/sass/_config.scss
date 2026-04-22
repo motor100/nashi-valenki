@@ -8,7 +8,7 @@ $bluecolor: #7DADC8; // Blue color;
 $fontsize: 16px; // Body Font Size
 $textcolor: #37120D; // Text Color
 $lineheight: 1.5; // Document Line Height
-$userfont: 'Manrope-regular', sans-serif; // User Font Family
+$userfont: 'Manrope', sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 
 // IMPORT SECTION
@@ -16,6 +16,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 
 // FONTS LOAD SECTION
 
+/*
 @mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
     font-family: $fname;
@@ -27,7 +28,8 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 
 @include font('Manrope-Light', italic, 400, '../fonts/Manrope-Light.ttf');
 @include font('Manrope-Regular', italic, 400, '../fonts/Manrope-Regular.ttf');
-//@include font('Monomakh', italic, 400, '../fonts/Monomakh-Regular.ttf');
+@include font('Monomakh', italic, 400, '../fonts/Monomakh-Regular.ttf');
+*/
 
 // GENERAL CSS SETTINGS
 * {
